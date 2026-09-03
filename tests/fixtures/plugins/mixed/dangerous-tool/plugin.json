@@ -1,0 +1,6 @@
+{
+  "name": "test.dangerous",
+  "description": "A fixture plugin marked dangerous, used to test the dangerous-permission gate.",
+  "permission": "dangerous",
+  "entry": "index.js"
+}

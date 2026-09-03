@@ -1,0 +1,43 @@
+<div class="settings-overlay" id="settingsOverlay">
+  <div class="settings-header">
+    <div class="settings-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.2 4.2l2.8 2.8M17 17l2.8 2.8M1 12h4M19 12h4M4.2 19.8 7 17M17 7l2.8-2.8"/></svg>
+      Settings
+    </div>
+    <div class="imagination-status"></div>
+    <div class="settings-close" id="settingsClose" title="Close">&times;</div>
+  </div>
+  <div class="settings-body">
+    <div class="settings-section">
+      <div class="settings-section-label">Boot Sequence</div>
+      <div class="settings-row">
+        <div class="settings-row-text">
+          <b>Cinematic Boot</b>
+          <span>The full power-up sequence — core, holographic rings, live system diagnostics, then J.A.R.V.I.S. activation. Turn off for a plain, near-instant sign-in screen.</span>
+        </div>
+        <div class="settings-toggle" id="toggleCinematicBoot" role="switch" tabindex="0"></div>
+      </div>
+      <div class="settings-row">
+        <div class="settings-row-text">
+          <b>Fast Boot</b>
+          <span>Keep the cinematic sequence but compress every stage's timing — same visuals, a few seconds instead of ~10.</span>
+        </div>
+        <div class="settings-toggle" id="toggleFastBoot" role="switch" tabindex="0"></div>
+      </div>
+      <div class="settings-row">
+        <div class="settings-row-text">
+          <b>Boot Sound</b>
+          <span>Synthesized power-up tones, sweep whooshes, and the activation chime, synced to each stage. Generated in-browser (Web Audio) — no audio files shipped.</span>
+        </div>
+        <div class="settings-toggle" id="toggleBootSound" role="switch" tabindex="0"></div>
+      </div>
+      <div class="settings-row">
+        <div class="settings-row-text">
+          <b>Replay boot sequence</b>
+          <span>Re-run it now, live against the real backend — a real diagnostic check, not a canned preview.</span>
+        </div>
+        <div class="settings-replay-btn" id="settingsReplayBoot">Replay</div>
+      </div>
+    </div>
+  </div>
+</div>

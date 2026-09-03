@@ -1,0 +1,22 @@
+<div class="imagination-overlay" id="imaginationOverlay">
+  <div class="imagination-header">
+    <div class="imagination-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6.5 6.5l2.8 2.8M14.7 14.7l2.8 2.8M17.5 6.5l-2.8 2.8M9.3 14.7l-2.8 2.8"/><circle cx="12" cy="12" r="3"/></svg>
+      Imagination
+    </div>
+    <div class="imagination-status" id="imaginationStatus">Describe a scene below to begin</div>
+    <div class="imagination-close" id="imaginationClose" title="Close">&times;</div>
+  </div>
+  <div class="imagination-canvas-wrap" id="imaginationCanvasWrap">
+    <div class="imagination-empty" id="imaginationEmpty">
+      <p>Describe a scene below — "a futuristic smart city with flying cars, drones and solar buildings" — and it renders here as a real interactive 3D scene: drag to rotate, scroll to zoom. Keep describing changes ("add drones", "make it nighttime") to build on it.</p>
+    </div>
+    <div class="imagination-loading" id="imaginationLoading"><div class="spin"></div><span id="imaginationLoadingLabel">Imagining…</span></div>
+  </div>
+  <div class="imagination-toolbar">
+    <input type="text" id="imaginationInput" placeholder="Imagine a futuristic smart city with flying cars, drones and solar buildings…" />
+    <button class="imagination-btn primary" id="imaginationGoBtn">Imagine</button>
+    <button class="imagination-btn" id="imaginationScreenBtn" title="Build a scene from what's on your real screen">From Screen</button>
+    <button class="imagination-btn" id="imaginationNewBtn" title="Start a fresh scene">New</button>
+  </div>
+</div>

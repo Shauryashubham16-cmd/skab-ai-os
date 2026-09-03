@@ -1,0 +1,62 @@
+  /* Boot-sequence visuals now live in styles/main.css (cinematic veil-hole
+     reveal + diagnostics + title card) so they load before this file and
+     can share --accent-bright/--bg-card etc. with the rest of the HUD.
+     #authScreen and everything below is unchanged. */
+  #authScreen {
+    position:fixed; inset:0; z-index:9999; display:flex; align-items:center; justify-content:center;
+    background:radial-gradient(circle at 50% 45%, #06121c 0%, #01060b 70%); font-family:inherit;
+  }
+  #authScreen.hidden { opacity:0; pointer-events:none; transition:opacity .5s ease; }
+
+  .auth-card {
+    width:min(400px, 90vw); padding:34px 30px; border-radius:18px; text-align:left;
+    background:rgba(6,20,30,.86); border:1px solid rgba(0,216,255,.22);
+    box-shadow:0 0 60px rgba(0,216,255,.10), inset 0 0 40px rgba(0,216,255,.03); backdrop-filter:blur(12px);
+  }
+  .auth-card h2 { margin:0; font-size:19px; letter-spacing:.14em; color:#dff6ff; text-transform:uppercase; }
+  .auth-card p.lead { margin:8px 0 22px; font-size:12.5px; color:rgba(190,235,255,.6); line-height:1.6; }
+  .auth-card label { display:block; font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(0,216,255,.65); margin-bottom:6px; }
+  .auth-card input {
+    width:100%; padding:11px 13px; margin-bottom:16px; border-radius:10px; font-size:13.5px; color:#e8f8ff;
+    background:rgba(0,216,255,.05); border:1px solid rgba(0,216,255,.2); outline:none; font-family:inherit;
+  }
+  .auth-card input:focus { border-color:rgba(0,216,255,.55); background:rgba(0,216,255,.08); }
+  .auth-btn {
+    width:100%; padding:12px; border:0; border-radius:10px; cursor:pointer; font-family:inherit;
+    font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#03151d; font-weight:700;
+    background:linear-gradient(90deg,#00d8ff,#7af7ff);
+  }
+  .auth-btn[disabled] { opacity:.55; cursor:progress; }
+  .auth-switch { margin-top:16px; font-size:12px; color:rgba(190,235,255,.6); text-align:center; }
+  .auth-switch a { color:#7af7ff; cursor:pointer; text-decoration:none; }
+  .auth-msg { margin-bottom:14px; font-size:12px; line-height:1.55; display:none; padding:10px 12px; border-radius:9px; }
+  .auth-msg.error { display:block; color:#ffb3bd; background:rgba(255,107,129,.1); border:1px solid rgba(255,107,129,.3); }
+  .auth-msg.info { display:block; color:#a7f3d0; background:rgba(78,227,155,.08); border:1px solid rgba(78,227,155,.28); }
+
+  /* History panel */
+  .history-head { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+  .history-new {
+    border:1px solid rgba(0,216,255,.28); background:rgba(0,216,255,.07); color:#9ff0ff;
+    border-radius:8px; padding:4px 9px; font-size:10.5px; letter-spacing:.1em; cursor:pointer; font-family:inherit; text-transform:uppercase;
+  }
+  .history-new:hover { background:rgba(0,216,255,.14); }
+  #historyList { margin-top:10px; max-height:230px; overflow-y:auto; }
+  .history-item {
+    display:flex; align-items:center; gap:8px; padding:8px 10px; margin-bottom:6px; border-radius:9px; cursor:pointer;
+    background:rgba(0,216,255,.03); border:1px solid transparent; transition:.18s;
+  }
+  .history-item:hover { background:rgba(0,216,255,.08); }
+  .history-item.active { border-color:rgba(0,216,255,.4); background:rgba(0,216,255,.1); }
+  .history-item .t { flex:1; min-width:0; font-size:12px; color:rgba(220,245,255,.88); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .history-item .when { font-size:10px; color:rgba(160,210,235,.5); }
+  .history-item .del { color:rgba(255,107,129,.7); font-size:12px; padding:0 2px; }
+  .history-empty { font-size:11.5px; color:rgba(160,210,235,.5); padding:6px 2px; }
+  .agent-badge {
+    display:inline-block; margin-left:8px; padding:2px 8px; border-radius:99px; font-size:10px; letter-spacing:.1em;
+    text-transform:uppercase; color:#9ff0ff; background:rgba(0,216,255,.1); border:1px solid rgba(0,216,255,.25);
+  }
+  .user-chip { display:flex; align-items:center; gap:8px; font-size:11px; color:rgba(190,235,255,.7); }
+  .user-chip button {
+    border:1px solid rgba(255,107,129,.3); background:rgba(255,107,129,.08); color:#ffb3bd;
+    border-radius:7px; padding:3px 8px; font-size:10px; cursor:pointer; font-family:inherit; text-transform:uppercase; letter-spacing:.1em;
+  }

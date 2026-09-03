@@ -1,0 +1,6 @@
+{
+  "name": "Not A Valid Name",
+  "description": "Manifest with an invalid name pattern.",
+  "permission": "read",
+  "entry": "index.js"
+}

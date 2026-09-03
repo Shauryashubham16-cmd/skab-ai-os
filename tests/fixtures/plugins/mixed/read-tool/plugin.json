@@ -1,0 +1,6 @@
+{
+  "name": "test.readonly",
+  "description": "A fixture plugin marked read, used as a control case.",
+  "permission": "read",
+  "entry": "index.js"
+}

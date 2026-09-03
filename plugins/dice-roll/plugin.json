@@ -1,0 +1,6 @@
+{
+  "name": "dice.roll",
+  "description": "Roll an N-sided die (or several). args: { sides?: number (default 6), count?: number (default 1) }",
+  "permission": "read",
+  "entry": "index.js"
+}

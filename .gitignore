@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Secrets — never commit real env values, only .env.example
+.env
+.env.local
+.env.*.local
+
+# Electron / build output
+dist/
+build/
+out/
+*.exe
+*.dmg
+*.AppImage
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Test/coverage output
+coverage/
+
+# Runtime-generated local state — secrets, per-machine identifiers, and
+# local data stores. Never committed; regenerated automatically on first run.
+data/.jwt-secret
+data/.local-user-id
+data/*.json

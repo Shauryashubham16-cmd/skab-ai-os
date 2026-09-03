@@ -1,0 +1,6 @@
+{
+  "name": "test.missingentry",
+  "description": "Manifest points at an entry file that does not exist.",
+  "permission": "read",
+  "entry": "nope.js"
+}
